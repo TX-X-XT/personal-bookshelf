@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+<div class = "titleBox">
+    <div class = "title">
+    </div>
+    <h1>Bookshelf</h1>
+</div>
+<div class = "buttonBox">
+    <div class="buttonDiv">
+    <form action = "/add" method = "get">
+        <button class = "button">Add</button>
+    </form>
+    </div>
+</div>
+<div class = "box">
+    <%for(let item of listItems){%>
+    <div class = "item">
+        <div class = "titleBox">
+        <p id="title<%=item.id%>">
+            <%=item.title%>
+        </p>
+        </div>
+        <div class="imgBox">
+            <img src="https://covers.openlibrary.org/b/isbn/<%= item.isbn %>-M.jpg" alt="Book Cover">
+        </div>
+        <div class = "miscBox">
+            <div class = "misc">
+                <p class = "isbn">
+                 ISBN: <%=item.isbn%>
+                </p>
+                <p class = 'rating'>
+                  Rating: <%=item.rating%>/10
+                </p>
+            </div>
+        </div>
+        <div class = "reviewBox">
+        <p class = "review">
+            <%=item.review%>
+        </p>
+
+        </div>
+        <form action="/delete" method="post">
+            <button class="button" name="deleteItemId" value="<%= item.id %>">Delete</button>
+        </form>
+
+    </div>
+    <%}%>
+</div>
+</body>
+</html>
+
+
+
+

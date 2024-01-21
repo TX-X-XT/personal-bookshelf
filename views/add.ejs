@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="./styles/add.css">
+</head>
+<body>
+
+<div class="box">
+    <form action="/submit" method="post">
+        <div class="titleBox">
+            <h3 class="title">Add The Title</h3>
+            <label>
+                <input type="text" name="title" placeholder="Enter Title">
+            </label>
+        </div>
+        <div class="isbnBox">
+            <h3 class="isbn">Add An ISBN</h3>
+            <label>
+                <input type="text" name="isbn" placeholder="Enter ISBN">
+            </label>
+        </div>
+        <div class="reviewBox">
+            <h3 class="review">Write Your Review</h3>
+            <label>
+                <textarea name="review" placeholder="Write your review here"></textarea>
+            </label>
+        </div>
+        <div class="ratingBox">
+            <h3 class="ratingTitle">Leave Your Rating</h3>
+            <label>
+                <select name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </label>
+        </div>
+        <div class="buttonBox">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
